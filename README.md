@@ -74,6 +74,13 @@ And with npm
             <repo>/demo-a/node_modules/typescript/lib/typescript.js
             ```
 
+## So what, the paths are different?
+
+While this demonstration is simple, and doesn't show _what_ can go wrong, a common thing I've been seeing:
+- TypeScript private brand types do not match (and they must match, else the private types are considered "different")
+- Graphs of build dependencies need to be upgraded together, and resolve to incorrect versions (versions from other worktrees)
+- Result in duplicate modules being bundled in vite apps (or any project that uses "bundling")
+
 
 ## Solution?
 
