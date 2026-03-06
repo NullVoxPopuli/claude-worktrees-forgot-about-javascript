@@ -14,6 +14,7 @@ purple "Initial Setup"
 pnpm install
 node ./index.js
 
+pruple "create worktree (git worktree add ./demo-a origin/main)"
 git worktree add ./demo-a origin/main
 
 purple "cd into worktree (demo-a)"
@@ -24,7 +25,7 @@ purple "after we run install...."
 pnpm install
 node ./index.js
 
-purple "cleanup"
+purple "cleanup (git worktree remove ./demo-a)"
 cd ..
 git worktree remove ./demo-a
 
