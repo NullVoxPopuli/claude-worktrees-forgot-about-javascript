@@ -1,0 +1,16 @@
+{
+  "name": "why-claude-forgot-about-javascript",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "git worktree add ./worktree-$(uuid | cut -c 1-6)"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0",
+  "packageManager": "pnpm@10.18.2",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}
