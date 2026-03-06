@@ -16,8 +16,6 @@ let root =
 let aDepsLocation = import.meta.resolve('typescript');
 let aDepsPath = fileURLToPath(aDepsLocation);
 let cleaned = aDepsPath.replace(root, "");
-let short = join('____', cleaned).replace('____', '<repo>');
-
-console.log(cleaned, short, join('___', cleaned));
+let short = join('<repo>', cleaned);
 
 console.log(short);
