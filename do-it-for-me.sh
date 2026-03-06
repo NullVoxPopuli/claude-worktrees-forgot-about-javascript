@@ -3,21 +3,26 @@
 # hope people have a .bashrc / .bash_profile set up correctly
 # so that it has access to pnpm
 
-echo -e "\n\nInitial Setup\n\n"
+
+
+PURPLE=$'\e[35m'
+ENDCOLOR=$'\e[0m'
+
+echo -e "\n\n${PURPLE}Initial Setup${END_COLOR}\n\n"
 pnpm install
 node ./index.js
 
 git worktree add ./demo-a origin/main
 
-echo -e "\n\ncd into worktree\n\n"
+echo -e "\n\n${PURPLE}cd into worktree${END_COLOR}\n\n"
 cd demo-a
 node ./index.js
 
-echo -e "\n\nthe path after installing locally\n\n"
+echo -e "\n\n${PURPLE}the path after installing locally${END_COLOR}\n\n"
 pnpm install
 node ./index.js
 
-echo -e "\n\ncleanup\n\n"
+echo -e "\n\n${PURPLE}cleanup${END_COLOR}\n\n"
 cd ..
 git worktree remove ./demo-a
 

@@ -1,6 +1,7 @@
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 import { join } from 'node:path';
+import { styleText } from 'node:util';
 
 /**
  * For all worktrees there exists only one .git directory
@@ -18,4 +19,4 @@ let aDepsPath = fileURLToPath(aDepsLocation);
 let cleaned = aDepsPath.replace(root, "");
 let short = join('<repo>', cleaned);
 
-console.log(short);
+console.log(styleText('yellow', short));
