@@ -15,6 +15,6 @@ let root =
 
 let aDepsLocation = import.meta.resolve('typescript');
 let aDepsPath = fileURLToPath(aDepsLocation);
-let cleaned = aDepsPath.replace(root, "")
+let cleaned = aDepsPath.replace(root, "/")
 
 console.log(join('<repo>', cleaned))
