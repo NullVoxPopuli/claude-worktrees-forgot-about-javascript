@@ -19,4 +19,6 @@ let aDepsPath = fileURLToPath(aDepsLocation);
 let cleaned = aDepsPath.replace(root, "");
 let short = join('<repo>', cleaned);
 
+console.log('\n');
+console.log(`TypeScript resolves to`);
 console.log(styleText('yellow', short));
