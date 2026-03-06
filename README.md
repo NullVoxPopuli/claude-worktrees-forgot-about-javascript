@@ -1,4 +1,4 @@
-# Claude's does not support worktrees well with JavaScript projects
+# Claude does not support worktrees well with JavaScript projects
 
 Claude, by default, creates worktrees in a sub-folder of the main git root.
 
