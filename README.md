@@ -50,6 +50,7 @@ node -e "console.log(require.resolve('typescript'))"
             ```bash
             <repo>/the-work-tree-path/node_modules/.pnpm/typescript@5.9.3/node_modules/typescript/lib/typescript.js
             ```
+            this is the correct path, but there is no error when it doesn't exist
 
   
 And with npm 
@@ -73,6 +74,7 @@ And with npm
             ```bash
             <repo>/demo-a/node_modules/typescript/lib/typescript.js
             ```
+            this is the correct path, but there is no error when it doesn't exist
 
 ## So what, the paths are different?
 
