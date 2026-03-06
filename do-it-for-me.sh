@@ -8,21 +8,23 @@
 PURPLE=$'\e[35m'
 ENDCOLOR=$'\e[0m'
 
-echo -e "\n\n${PURPLE}Initial Setup${END_COLOR}\n\n"
+purple() { echo "${PURPLE}$1${ENDCOLOR}" ; }
+
+pruple "Initial Setup"
 pnpm install
 node ./index.js
 
 git worktree add ./demo-a origin/main
 
-echo -e "\n\n${PURPLE}cd into worktree${END_COLOR}\n\n"
+purple "cd into worktree (demo-a)"
 cd demo-a
 node ./index.js
 
-echo -e "\n\n${PURPLE}the path after installing locally${END_COLOR}\n\n"
+purple "after we run install...."
 pnpm install
 node ./index.js
 
-echo -e "\n\n${PURPLE}cleanup${END_COLOR}\n\n"
+purple "cleanup"
 cd ..
 git worktree remove ./demo-a
 
