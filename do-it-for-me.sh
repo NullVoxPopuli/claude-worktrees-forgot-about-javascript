@@ -7,7 +7,7 @@ echo -e "\n\nInitial Setup\n\n"
 pnpm install
 node ./index.js
 
-git worktree add ./demo-a
+git worktree add ./demo-a origin/main
 
 echo -e "\n\ncd into worktree\n\n"
 cd demo-a
