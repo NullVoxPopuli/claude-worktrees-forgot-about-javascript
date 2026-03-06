@@ -10,7 +10,7 @@ ENDCOLOR=$'\e[0m'
 
 purple() { echo "${PURPLE}$1${ENDCOLOR}" ; }
 
-pruple "Initial Setup"
+purple "Initial Setup"
 pnpm install
 node ./index.js
 
