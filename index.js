@@ -1,5 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
+import { join } from 'node:path';
 
 /**
  * For all worktrees there exists only one .git directory
@@ -14,6 +15,6 @@ let root =
 
 let aDepsLocation = import.meta.resolve('typescript');
 let aDepsPath = fileURLToPath(aDepsLocation);
-let cleaned = aDepsPath.replace(root, "<repo>")
+let cleaned = aDepsPath.replace(root, "")
 
-console.log(cleaned)
+console.log(join('<repo>', cleaned))
