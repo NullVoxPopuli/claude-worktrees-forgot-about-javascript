@@ -1,3 +1,8 @@
+> [!WARNING]
+> I opened [an issue](https://github.com/anthropics/claude-code/issues/41075) on the Claude Code repo, and they closed as "Not planned"
+
+
+
 # Claude does not support worktrees well with JavaScript projects
 
 Claude, by default, creates worktrees in a sub-folder of the main git root.
@@ -5,10 +10,6 @@ Claude, by default, creates worktrees in a sub-folder of the main git root.
 _This is bad_.
 
 It's bad for JavaScript especially, because when node, bun, whatever using node's resolve algorithm searcehes for a `bin` or dependency, it searches _up_ the directory structure (yarn 1 relied on this to its detriment).
-
-> [!NOTE]
-> I opened [an issue](https://github.com/anthropics/claude-code/issues/41075) on the Claude Code repo, and they closed as "Not planned"
-
 
 Example:
 ```
